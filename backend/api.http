@@ -1,0 +1,8 @@
+GET /
+host: localhost:3000
+
+GET /users
+host: localhost:3000
+
+GET /error
+host: localhost:3000
