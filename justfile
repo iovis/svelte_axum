@@ -20,4 +20,4 @@ list:
 
 # Start the backend development server
 @backend:
-    cd backend && RUST_LOG=debug cargo watch -x run
+    cd backend && cargo watch -x run

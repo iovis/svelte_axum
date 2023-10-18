@@ -44,6 +44,7 @@ struct User {
 }
 
 #[axum::debug_handler]
+#[tracing::instrument]
 async fn users() -> Json<Vec<User>> {
     let users = get_users().await;
     tracing::debug!("debug from users!");

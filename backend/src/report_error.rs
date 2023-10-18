@@ -2,6 +2,7 @@ use axum::http::StatusCode;
 use axum::response::{IntoResponse, Response};
 use color_eyre::Report;
 
+#[derive(Debug)]
 pub struct ReportError(Report);
 
 impl std::fmt::Display for ReportError {

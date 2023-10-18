@@ -4,7 +4,9 @@ use tracing_tree::HierarchicalLayer;
 
 pub fn setup() {
     Registry::default()
-        .with(EnvFilter::from_default_env())
+        .with(EnvFilter::new(
+            std::env::var("RUST_LOG").unwrap_or_else(|_| "backend=debug,tower_http=debug".into()),
+        ))
         .with(
             HierarchicalLayer::new(2)
                 .with_targets(true)
